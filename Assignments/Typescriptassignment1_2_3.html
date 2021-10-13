@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPESCRIPT ES6 ASSIGNMENT</title>
+</head>
+<body>
+    <div>
+        <center><h2> ASSIGNMENT 1</h2> </center>
+        <p>
+            <h2>question 1</h2>
+            const a =10; <br>
+            
+            function not_change() <br>
+            { <br>
+                
+                a=11;   // error TS2588: Cannot assign to 'a' because it is a constant. <br>
+                console.log(a);   <br>
+            
+             } <br>
+            
+            <h2>question 2</h2>
+            
+            var a=12; <br>
+            if (a==12) <br>
+            { <br>
+                let not_access= "i am not going to access outside this loop"; <br>
+            } <br>
+            console.log(not_access); <h3> <b>OUTPUT</b>//error TS2304: Cannot find name 'not_access'.</h3>
+            
+            <h3>question 3</h3>
+            
+            let obj = {id: 1, title:'checking object assign',price:123},printorder:(){},getprice:() { obj.price;}}; <br>
+            let clone = Object.assign({}, obj); <br>
+            document.write(clone) ..................  working on.......
+            
+            <h3>question 4</h3>
+            
+            let array= ['hello', 'this', 'is','arraystring','to','object']; <br>
+            let newArr = array.map(item => { <br>
+              return { <br>
+                'name': item, <br>
+                'length':item.length <br>
+              } <br>
+            }) <br>
+            
+            console.log(newArr); <br>
+            
+            <h3>question 5</h3>
+            
+            <b>5.a </b>>
+            
+            let add=function(value=10) <br>
+            { <br>
+                return value; <br>
+            } <br>
+            console.log('Default value of parameter is '+ (add()); <br>
+            
+            <b>5.b</b>
+            
+            let userfreinds =function(username,...frndarray) // <b>using Rest</b>  <br>
+            { <br>
+                console.log(username); <br>
+                for (let i in frndarray) <br>
+                { <br>
+                    console.log(frndarray[i]); <br>
+                } <br>
+            } <br>
+            let frndarray=['ram','shyam','gopi']; <br>
+            let username="sumit"; <br>
+            userfreinds(username,frndarray); <br>
+            
+            <b>5.c</b> <br>
+            
+            function printcapitalletters(name1,name2,name3, name4, name5) <b>//using spread</b> <br>
+            { <br> 
+                console.log( name1.toUpperCase() ); <br>
+                console.log( name2.toUpperCase() ); <br>
+                console.log( name3.toUpperCase() ); <br>
+                console.log( name4.toUpperCase() ); <br>
+                console.log( name5.toUpperCase() ); <br>
+            } <br>
+             
+            var name_array = ['thor','loki','ironman','captain america','hulk','roody']; <br>
+             
+            printcapitalletters(...name_array); <br>
+            
+            <h3>Question 6</h3>
+            
+                let myname = "sumit"; <br>
+                let laptopmodel = 'xyz 5000'; <br>
+                let deskno = 500023; <br>
+
+                console.log(`Dear Sysnet, I am facing an issue with my pc I kindly request you to look into it. <br>
+                My details are as follows: Name : ${name}, LaptopModel: ${laptopmodel}, Deskno: ${deskno} `); <br>
+            
+            <h2>question 7.a</h2> <b>Destructing concept</b>>
+            
+            let employee =['zero','one','two','three']; <br>
+            
+            let [zero,first,second,third] = employee; <br>
+            console.log(third); <br>
+            
+            
+            <h2>question 7.b </h2>
+            
+            let org ={name:'thor',address:{
+                city:'asgard', <br>
+                pincode:22222 <br>
+            }}; <br>
+            
+            let {name,address.city,address.pincode}= org; <br>
+            
+            console.log(address.pincode); <br>
+            
+            <h3>Question 8</h3>
+            class Account{ <br>
+                constructor(id,name,balance) <br>
+                { <br>
+                    this.id = id; <br>
+                    this.name = name; <br>
+                    this.balance = balance; <br> 
+                } <br>
+            } <br>
+            class SavingsAccount extends Account{ <br>
+                constructor(id,name,balance,interest) <br>
+                { <br>
+                    super(id,name,balance); <br>
+                    this.interest = interest; <br>
+                } <br>
+                totalBalance = () => { this.balance += this.interest; <br>
+                    console.log(this.balance);}; <br>
+            } <br>
+            
+            class CurrentAccount extends Account{ <br>
+                constructor(id,name,balance,cashCredit) <br>
+                { <br>
+                    super(id,name,balance); <br>
+                    this.cashCredit = cashCredit; <br>
+                } <br>
+                totalBalance = () => { this.balance += this.cashCredit; <br>
+                    console.log(this.balance);}; <br>
+            } <br>
+            
+            let S1 = new SavingsAccount(1001,'Sumit joshi',20000,4000); <br>
+            let S2 = new CurrentAccount(10003, 'jack', 50000,2200); <br>
+            S1.totalBalance(); <br>
+            S2.totalBalance(); <br>
+            
+            
+            
+            <center><h1>ASSIGNMENT 2</h1></center>
+            <h3>question 1</h3>
+            class fibonacci <br>
+            { <br>
+                private previous=0; <br>
+                private current=1; <br>
+                nextTerm=0; <br>
+
+                next =() =>{ <br>
+                    for (let i = 1; i <= 10; i++) <br> 
+                    { <br>
+                    console.log(this.first); <br>
+                    this.nextTerm = this.previous + this.current; <br>
+                    this.previous = this.current; <br>
+                    this.current = this.nextTerm; <br>
+                            
+                    } <br>
+                }   <br>
+            }br
+            let obj1 = new fibonacci() <br>
+            console.log(obj1.next()) <br>
+
+                  <h3>Question 2</h3>          
+                
+                function compose(f1,f2) { <br>
+                    function newfun(n){ <br>
+                        return f1(f2(n)); <br>
+                    } <br>
+                    var value = newfun(n); <br>
+                    document.write(value); <br>
+                } <br>
+
+                <
+
+            <CENter><H1>ASSIGNMENT 3</H1></CENter>
+            <h3>question 1</h3>
+            const x=3; <br>
+            const y=3; <br>
+            const promise1 = Promise.resolve(x); <br>
+            const promise2 = y; <br>
+            const promise3 = new Promise((resolve, reject) =>  <br>
+            { <br>
+
+            setTimeout(resolve, 100, sum()); <br>
+            }); <br>
+
+            Promise.all([promise1, promise2, promise3]).then((values) => { <br>
+            console.log(values); <br>
+            }); <br>
+
+            function sum() <br>
+            { <br>
+                return x+y; <br>
+            } <br>
+
+            <h3>`Question 2</h3>
+            class Account{ <br>
+                constructor(id,name,balance) <br>
+                { <br>
+                    this.id = id; <br>
+                    this.name = name; <br>
+                    this.balance = balance; <br> 
+                } <br>
+            } <br>
+            class SavingsAccount extends Account{ <br>
+                constructor(id,name,balance,interest) <br>
+                { <br>
+                    super(id,name,balance); <br>
+                    this.interest = interest; <br>
+                } <br>
+                totalBalance = () => { this.balance += this.interest; <br>
+                    console.log(this.balance);}; <br>
+            } <br>
+            
+            class CurrentAccount extends Account{ <br>
+                constructor(id,name,balance,cashCredit) <br>
+                { <br>
+                    super(id,name,balance); <br>
+                    this.cashCredit = cashCredit; <br>
+                } <br>
+                totalBalance = () => { this.balance += this.cashCredit; <br>
+                    console.log(this.balance);}; <br>
+            } <br>
+            
+            let S1 = new SavingsAccount(1001,'sumit',40000,4000); <br>
+            let S2 = new CurrentAccount(10003, 'jack', 30000,3000); <br>
+            S1.totalBalance(); <br>
+            S2.totalBalance(); <br>
+            
+            <h3>Question 3</h3>
+            interface Printable{ <br>
+                fname?:string; <br>
+                id?: number; <br>
+                area?:Number; <br>
+            }; <br>
+             
+            let circle :Printable ={ <br>
+               area: 720, <br>
+            }; <br>
+            
+            let employee :Printable = { <br>
+                fname: "Sumit joshi", <br>
+                id:1001, <br>
+            }; <br>
+            
+            function printAll(circle, employee){ <br>
+                console.log(circle); <br>
+                console.log(employee); <br>
+            } <br>
+            
+            printAll(circle,employee); <br>
+        </p>
+
+    </div>
+</body>
+</html>
