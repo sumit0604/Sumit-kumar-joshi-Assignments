@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>ASSIGNMENT NUMBER 1</h1></center>
+    <div>
+        <h4>Question number 1</h4>
+        <H3>HTML content</H3>
+        
+        <p>
+            
+            &lt;body&gt;
+                &lt;input&gt; type="text" placeholder="number" id="Numberinput"/><br/><br/>
+                &lt;button onclick="sumDigits()"&gt;Calculate&lt;/button&gt;&lt;br/&gt;<br/>
+                &lt;input&gt; type="text" readonly="true" placeholder="the result" id="result"/> &lt;br&gt;
+            &lt;/body&gt;
+        </p>
+        <p>
+            <h4>Javacript code</h4>
+            function sumDigits() <br> {<br>
+                var value = document.getElementById("Numberinput").value, <br>
+                    sum = 0;  <br>
+            
+              while (value) {<br>
+                  sum += value % 10;<br>
+                  value = Math.floor(value / 10);<br>
+              } <br>
+              
+              var result = document.getElementById("result");<br>
+              result.value = sum;<br>
+              alert("value is here   "+sum);<br>
+            }
+            
+        </p>
+    </div>
+    <div>
+        <p>
+            <h4>Question 2</h4>
+            <h3>Javascript content</h3>
+        </p>
+        <p>
+            var number = 17; <br>
+sum=0; <br>
+for(var i=2;i<=number;i++) <br>
+{ <br>
+    if (i%2!=0) <br>
+    { br
+        document.write(" "+i); <br>
+    } <br>
+}
+
+        </p>
+    </div>
+    <div>
+        <h3>Question 3</h3>
+        <h4>Javacript content</h4>
+        function parity(number) <br>
+{<br>
+    if(number%2==0)<br>
+    {<br>
+        
+        alert("The number "+number + " is even")<br>
+    }<br>
+    else{<br>
+        alert("The number "+number + " is odd")<br>
+    }<br>
+}<br>
+
+parity(13);
+    </div>
+    <div>
+        <h3>Question 4</h3>
+        year = 2020 ; <br>
+while (year != 2100) <br>
+{ <br>
+        
+            if (year%4==0 && year %100!=0 || year%400==0) <br>
+            { <br>
+                document.write(" --"+year); <br> 
+                
+            } <br>
+            year+=1; <br>   
+        } <br>
+    </div>
+
+    <div>
+        <h3>Question 6</h3>
+        <p>
+            print_rect(); <br>
+            function print_rect() <br>
+            { <br>
+                var str =prompt("Enter a string"); <br>
+                var str_to_array = str.split(" "); <br>
+                for(i=0;i&lt;str_to_array.length+4; i++) <br>
+                { <br>
+                    document.write("*"); <br>
+                } <br>
+                document.write("&lt;br>"); <br>
+                for(i=0;i&lt;str_to_array.length;i++) <br>
+                { <br>
+                    document.write("* " + str_to_array[i] + " * &lt;br>"" ); <br>
+                } <br>
+                for(i=0;i&lt;str_to_array.length+4; i++) <br>
+                { <br>
+                    document.write("*"); <br>
+                } <br>
+                document.write("<br>") <br>
+            }
+
+        </p>
+    </div>
+    
+        <div>
+            <h3>Question 7</h3>
+            <h3> Html content</h3>
+            &lt;body&gt; <br>
+                &lt;label for="currency"&gt;Currency in USD:&lt;/label&gt; <br>
+                &lt;button onclick="sumDigits()"&gt;Calculate</button><br/><br/>
+                &lt;input type="number" placeholder="number" id="Numberinput"/&gt;<br/><br/>
+                        INR: &lt;input type="text" id="inr"&gt; <br>
+                        YEN &lt;input type="text" id="yen"&gt; <br>
+                        EURO &lt;input type="text" name="" id="euro"&gt; <br>    
+            &lt;/body&gt;
+            <h3>Javascript content</h3>
+            function sumDigits() <br>
+{
+    var value = document.getElementById("Numberinput").value; <br>
+    var inrr = value * 73.4; <br> 
+    var  yenr = value*109.14; <br> 
+    var  euror = value*0.84;<br>
+    var resultinr = document.getElementById("inr"); <br>
+    var resultyen = document.getElementById("yen"); <br>
+    var resulteuro = document.getElementById("euro"); <br>
+    resultinr.value = inrr; <br>
+    resultyen.value = yenr; <br>
+    resulteuro.value = euror; <br>
+    // document.write("priting digits") <br>
+    // document.write(inrr,euror,yenr); <br>
+}
+        </div>
+    <div>
+        <h3> Question 8</q></h3>
+        <p>
+            var array1 = ['sumit' , 'xyz' , 'asd']; <br>
+            var array2 = ['lkj' , 'kjh' ,'kjsd']; <br>
+            var mergearay = array1.concat(array2); <br>
+            document.write(mergearay); <br>
+        </p>
+    </div>
+
+    <div>
+        <h3>Question 9</h3>
+        <p>
+            var arr1 =['A', 'B','C','D']; <br>
+            var arr2 =['e','f','g','h']; <br>
+            var k =1; <br>
+            var m=3; <br>
+
+            for(let i =0;i<4;i++)     
+                {    
+                for(let j=m;j>=k;j--)   <br>
+                    { <br>
+                    arr1[j+1]=arr1[j]; <br>
+                     } <br>
+                    arr1[k] =arr2[i]; <br>
+                    k=k+2; <br>
+                    m=m+1; <br>
+                } <br>
+for (let i=0;i<8;i++)
+{ 
+    document.write(arr1[i]); <br> 
+}
+        </p>
+    </div>
+    <div>
+        <h3>Question 10</h3>
+        <p>
+            var n1 = 1,  n2 = 1, next_num, i;   <br>
+            document.write( "Fibonacci Series: ");  <br>
+            function Fibonacci(num)  <br>
+            {   <br>
+                    for ( i = 1; i <= num; i++)   
+                    { <br>  document.write ("  " +  n1); <br>  
+                        next_num = n1 + n2;  <br>  
+                        n1 = n2;  <br>  
+                        n2 = next_num;  <br>  
+                    }   <br>
+            } <br>
+            Fibonacci(100) <br>
+        </p>
+    </div>
+    <div>
+        <h3>Question 11</h3>
+        <p>
+            
+var array1=[]; <br>
+for(let i=0;i<20;i++)
+{
+        let randm = Math.random(); <br> 
+        randm = randm*100; <br>
+        // document.write(Math.floor(randm)); <br>
+        elements =Math.floor(randm); <br>
+        array1.push(elements); <br>
+}
+        document.write("Original array  --"+ array1+"<br>"); <br>
+        document.write("Reversed array--"+array1.reverse()); <br>
+
+        </p>
+    </div>
+    <div>
+        <h3>Question 12</h3>
+        <p>
+            function longestToken(stri) <br>
+{ <br>
+            for(let i =0;i<stri.length;i++)  <br>
+        {     
+            if(stri.charAt(i)== 'a' || stri.charAt(i)=='b') <br> 
+            { <br>
+                continue <br>
+            } <br>
+            else <br>
+            { <br>
+                document.write(stri[i]); <br>
+            } <br>
+        } <br>
+} 
+
+        longestToken('asdadadasdasdasdsadbbbbbbasdasdas') <br>
+        </p>
+    </div>
+
+ <div>
+     <H2>Question 13</H2>
+     <p>
+        <h2>This is by for loop</h2>
+        &lt;script> <br>
+            var numbers =[1,2,3,4,5,6,7,8]; <br>
+            sum=0; <br>
+
+            for(i=0;i&lt;numbers.length;i++) <br>
+            { <br>
+                sum+=number[i]; <br>
+            } <br>
+            document.write(sum); <br>
+    
+                 &lt;/script> <br>
+            
+            <h2 id="while">This is with the help of while loop</h2> 
+       &lt;script> <br>
+           counter=0 <br>
+        while (counter&lt;numbers.length) <br>
+        { <br>
+            sum1+=numbers[counter]; <br>
+            counter++; <br>
+        } <br>
+        document.write(sum1); <br>
+       &lt;/script> <br>
+       <h2>With the help of do while loop</h2>
+            do <br>
+        { <br>
+            // document.write(number[counter]); <br>
+            sum +=number[counter]; <br>
+            counter++; <br>
+        }while(counter&lt;number.length) <br>
+
+     </p>
+     
+ </div>
+ <div>
+     <h2>Question 14</h2>
+     <p>
+     check =0; <br>
+            var array1=[]; <br>
+            for(let i=0;i&lt;100;i++)
+            { <br>
+                    let randm = Math.random(); <br>
+                    randm = randm*100; <br>
+                    // document.write(Math.floor(randm)); <br>
+                    elements =Math.floor(randm); <br>
+                    array1.push(elements); <br>
+            } <br>
+            document.write("<br>"+array1); <br>
+            for(let j=0;j&lt;array1.length;j++) <br>
+            { <br>
+                if(array1[j] > check) <br>
+                { <br>
+                    check = array1[j]; <br>
+                } <br>
+            } <br>
+            document.write("<br>"+"Highest number is--"+check); <br>
+
+            checksmallest =99; <br>
+            for(let j=0;j&lt;array1.length;j++)
+            { <br>
+                if(array1[j] < checksmallest) <br>
+                { <br>
+                    checksmallest = array1[j]; <br>
+                } <br>
+            } <br>
+
+            document.write("<br>"+"Smallest number is--"+checksmallest+"<br>"); <br>
+            even=0 <br>
+            odd=0 <br>
+            function even_or_odd() <br>
+            { <br>
+                    var total_count; <br>
+                    document.write("Highest count is even or odd-->>><br>"); <br>
+                    for(i=0;i&lt;array1.length;i++) <br>
+                    { <br>
+                        if(array1[i]%2==0) <br>
+                        { <br>
+                            even++ <br>
+                        } <br>
+                        else{ <br>
+                            odd++ <br>
+                        } <br>
+                    } <br>
+                    if (even>odd) <br>{
+                        document.write("even"); <br>
+                    } <br>
+                    else{ <br>
+                        document.write("odd"); <br>
+                    } <br>
+            } <br>
+            sum4=0 <br>
+            function average() {  <br>
+                for(i =0;i&lt;array1.length;i++) <br>
+                { <br>
+                    sum4+=array1[i] <br>
+                }
+                document.write("<br>"+"Average of above array is-->>"+sum4/array1.length); <br>
+                
+            } <br>
+            even_or_odd() <br>
+            average() <br>
+
+`       </p>
+        </div>
+        <div> <h3>Question 15</h3>
+            <p>
+                            
+            sorting(); <br>
+            function sorting() <br>
+            { <br>
+                var a = [50,60,10,20,40,90,80,70,30,12,43,34,66,33,23]; <br>
+                var temp, n=a.length; <br>
+                for(i=0;i&lt;n-1;i++) <br>
+                { <br>
+                    for(j=0; j&lt;n-i-1;j++) <br>
+                    { <br>
+                        if(a[j]>a[j+1]) <br>
+                            { <br>
+                                temp = a[j+1]; <br>
+                                a[j+1] = a[j]; <br>
+                                a[j] = temp; <br>
+                            } <br>
+                    } <br>
+                } <br>
+                for(i=0;i&lt;n;i++) <br>
+                { <br>
+                    document.write(a[i] + " "); <br>
+                } <br>
+            } <br>
+                        </p>
+        </div>
+        <div>
+            <H2>Question 17 </H2>
+            function leftRotate(a, k, n) { <br>
+                for (i = 0; i < k; i++) { <br>
+                    leftRotate_One(a, n); <br>
+                } <br>
+                console.log(a) <br>
+            } <br>
+            
+            function leftRotate_One(a, n) { <br>
+                var i, temp; <br>
+                temp = a[0]; <br>
+                for (i = 0; i < n - 1; i++) <br>
+                       a[i] = a[i + 1]; <br>
+                    a[n - 1] = temp; <br>
+            } <br>
+            var a = [3, 6, 4, 1, 4, 6, 4, 9, 66] <br>
+            leftRotate(a, 5, 9) <br>
+            console.log(a) <br>
+        </div>
+<hr>
+
+
+        <center><h1>ASSIGNMENT NUMBER 2 is starting from here</h1></center>
+
+        <div>
+
+            <h1>Question 1</h1>
+            <P>
+                    var x=20; <BR>
+                    function composedValue(square,double) <br>
+                    { <br> 
+                        function square(x) <br>
+                        { <br>
+                            return x*x; <br>
+                        } <br>
+                        function double(x) <br>
+                        { <br>
+                            return x*2; <br>
+                        } <br>
+                        return square(double(x)); <br>
+                    } <br>
+                    a= composedValue(); <br>
+                    console.log(a);  <br>
+                    console.log("completed"); <br>
+                </P> 
+        </div>
+        <div>
+            <h2>Question 2</h2>
+            <p>
+                    n=2; <br>
+                function compose(f1,f2)  <br>{
+                    
+                    function f1(n){ <br>
+                        return n*n; <br>
+                    } <br>
+                    function f2(n) <br>
+                    { <br>
+                        return n+n; <br>
+                    } <br>
+                    return f1(f2(n)); <br>
+                } <br>
+                console.log(compose());
+            </p>
+        </div>
+        <div>
+            <h2>Question 3</h2>
+            <p>
+                let arr=[1,2,3,4]; <br>
+        
+                    function find(a,test) <br>
+                    { <br>
+                        function test() <br>
+                    { <br>
+                        for (let i in arr) <br>
+                        { <br>
+                            if (arr[i]%2==0) <br>
+                            { <br>
+                                console.log(arr[i]+"-->" + true); <br>
+                            } <br>
+                            else <br>
+                            { <br>
+                                console.log(false); <br>
+                            } <br>
+                        } <br>
+                    } <br>
+                    return test(); <br> 
+                    } <br>
+                    
+                    find(); <br>
+            </p>
+        </div>
+        <hr>
+            <center><h1>ASSIGNMENT NUMBER 3 is starting from here</h1></center>
+
+            <div>
+                <h3>Question 1</h3>
+                <p>
+                    class Rectangle{ <br>
+                        constructor (width,height) <br>
+                        { <br>
+                            this.width = width; <br>
+                            this.height = height; <br>
+                        }    <br>
+                    } <br>
+                    
+                    var ob = new Rectangle(3,5) <br>
+                    console.log("width is -->>"+ob.width); <br>
+                    console.log("height is -->>"+ob.height); <br>
+                    </p> 
+                    <h2> 
+                    question 2
+                </h2>
+                <p>
+                    class Rectangle{ <br>
+                        constructor (width,height) <br>
+                        { <br>
+                            this.width = width; <br>
+                            this.height = height; <br>
+                            this.getarea =function(){ <br>
+                                return width*height; <br>
+                            } <br>
+                        } <br>
+                    } <br>
+                    const a = new Rectangle(3,4) <br>
+                    document.write(a.getarea()); <br>
+                    console.log(a); <br>
+                </p>
+                <h2>Question 4</h2>
+                <p>
+                                    
+                class Person{} <br>
+                var P1 = new Person(); <br>
+                P1.firstName ="batman"; <br>
+                P1.lastName = "loki"; <br>
+                document.write( P1.firstName  + " " + P1.lastName + "&lt;br>"); <br>
+                document.write("after changing the first name with person object &lt;br>"); <br>
+                P1.firstName="thor"; <br>
+                document.write( P1.firstName  + " " + P1.lastName + "&lt;br>"); <br>
+                </p>
+                <h2>Question 5</h2>
+                <p>
+                                        
+                    class Person{} <br>
+                    var P1 = new Person(); <br>
+                    P1.firstName ="batman"; <br>
+                    P1.lastName = "loki"; <br>
+                    document.write( P1.firstName  + " " + P1.lastName + "&lt;br>"); <br>
+                    document.write(" &lt;h2>after adding the middlename with person object&lt;/h2> &lt;br>"); <br>
+                    P1.MiddleName="middle"; <br>
+                    document.write( P1.firstName+" "+P1.MiddleName + " " + P1.lastName + "&lt;br>"); <br>
+                    <h4>Well it is depend on programer need. but yes it is useful to add property using class object</h4>
+                </p>
+                <h3>question 6</h3>
+                <p>
+                                    
+                var string = '( <br>
+                    { <br>
+                        "firstName":"THOR" , <br>
+                         "lastName":"loki" <br>
+                    } <br>
+                              )'; <br>
+                var obj = eval(string); <br>
+                console.log(obj);  // return an object of string object <br>
+                console.log(obj.firstName +" "+ obj.lastName); <br>
+                </p>
+                <h3>Question 7</h3>
+                <p>
+                    var string = '{ <br>
+                        "firstName":"THHOR" , <br>
+                         "lastName":"LOKI" <br>
+                        }'; <br>
+                    var obj = JSON.parse(string); <br>
+                    console.log(obj); <br>
+                    document.write(obj.firstName + " " + obj.lastName); <br>
+                </p>
+                <h2>Question 8</h2>
+                <p>
+                    function person(fname,lname,age,skill,dateofbirth,address,married,profession){ <br>
+                        this.fname=fname; <br>
+                        this.lname=lname; <br>
+                        this.age=age; <br>
+                        this.skill=skill; <br>
+                        this.dateofbirth=dateofbirth; <br>
+                        this.address=address; <br>
+                        this.married=married; <br>
+                        this.profession=profession; <br>
+                    } <br>
+                    var person1=new person("panda", "cheetah",22,['c'],"24/10/1997",{city:"poland",pincode:"521185"},"false","sr analyst"); <br>
+                    var person2=new person("baghh", "toger",21,['html'],"8/6/1997",{city:"sarjha",pincode:"500038"},"false","jr analyst"); <br>
+                    
+                    print=function(){ <br>
+                        console.log(person1); <br>
+                        console.log(person2); <br>
+                    }(); <br>
+                </p>
+                <h3>for question 9 just put this code for function person</h3>
+                <p>
+                                        
+                    amitabh=new person("amitabh", "bachan",22,['c'],"24/10/1997",{city:"hyberabad",pincode:"521185"},"false","sr analyst"); <br>
+                    abhishek=new person("abhishek",21,['html'],"8/6/1997","false","jr analyst"); <br>
+                    var abhishek=Object.create(amitabh); <br>
+                    aaradhya=new person("aaradhya",20,['python'],"10/5/2000","fresher") <br>
+                    var aaradhya=Object.create(amitabh,abhishek); <br>
+                    print=function(){ <br>
+                        console.log(amitabh); <br>
+                        console.log(abhishek.lname); <br>
+                        console.log(abhishek.address); <br>
+                        console.log(aaradhya); <br>
+                    }(); <br>
+                    <h3>Question 11</h3>
+                    class BankAccount{ <BR></BR>
+                        constructor(accountNumber, accountHolderName, accountBalance) <br>
+                        { <br>
+                            this.accountNumber = accountNumber; <br>
+                            this.accountHolderName = accountHolderName; <br>
+                            this.accountBalance = accountBalance; <br>
+                            this.getCurrentBalance= function() <br>
+                            { <br>
+                                document.write(this.accountBalance); <br>
+                            }; <br>
+                        } <br>
+                    } <br>
+                    
+                    class SavingsAccount extends BankAccount{ <br>
+                        constructor(accountNumber, accountHolderName, accountBalance, isSalary){ <br>
+                            super(accountNumber, accountHolderName, accountBalance); <br>
+                            this.isSalary = isSalary; <br>
+                            this.withdraw =function(amount) <br>
+                            { <br>
+                                this.accountBalance -= amount; <br>
+                                if(accountBalance == 0) <br>
+                                return -1; <br>
+                            }; <br>
+                        } <br>
+                    
+                    } <br>
+                    
+                    class CurrentAccount extends BankAccount { <br>
+                        constructor(accountNumber, accountHolderName, accountBalance, odLimit){ <br>
+                            super(accountNumber, accountHolderName, accountBalance); <br>
+                            this.odLimit = odLimit; <br>
+                            this.withdraw = function(amount) <br>
+                            { <br>
+                                this.accountBalance -= amount; <br>
+                                if(accountBalance < 0) <br>
+                                return -1; <br>
+                            }; <br>
+                        } <br>
+                    } <br>
+                    
+                    var s1 = new SavingsAccount(50201024, "jack the giant slayer", 25000, 1); <br>
+                    s1.withdraw(5000); <br>
+                    s1.getCurrentBalance(); <br>
+                    <hr>
+                </p>
+            </div>
+            
+</body>
+</html>
