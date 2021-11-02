@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+    
+   <!--  this is our beans -->    
+    <bean class="springcorecodecollection.Question" name="collectioncheck">
+    	<property name="questionId">
+    		<value>1</value>
+    	</property>
+    	<property name="question">
+    		<value>What are your Hobbies??</value>
+    	</property>
+ 		
+ 		<property name="answerlist">
+ 			<list>
+				<value>my hobbies is playing cricket</value>
+				<value>my hobbies is playing videogames</value>
+			</list> 			
+ 		</property>
+ 		<property name="answerset">
+ 			<set>
+ 				<value>I love to watch cartoon</value>
+ 				<value>Love to Explore new places</value>
+ 			</set>
+ 		</property>
+ 		
+ 		<property name="answermap">
+ 			<map>
+ 				<entry key="1" value="I love to communicate with strangers" />
+ 				<entry key="2" value="I love to read books" />
+ 			</map>
+ 		</property>  	
+    </bean>
+    
+   
+
+</beans>
